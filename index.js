@@ -95,7 +95,7 @@ function getExtensions (options) {
  * @return  {boolean}
  */
 function hasStringifiableExtension (filename, extensions) {
-  var file_extension = path.extname(filename).toLowerCase();
+  var file_extension = path.extname(filename).toLowerCase().slice(1);
 
   return extensions.indexOf(file_extension) > -1;
 }
